@@ -10,6 +10,8 @@ import CompareProducts from './pages/CompareProducts';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import SingleProduct from './pages/SingleProduct';
+import Cart from './pages/Cart';
+import CheckOut from './pages/CheckOut';
 
 function App() {
   return (
@@ -22,9 +24,11 @@ function App() {
                     <Route path='about/contact' element={<Contact />}/>
                     <Route path='wishlist' element={<Wishlist />}/>
                     <Route path='CompareProducts' element={<CompareProducts />}/>
-                    <Route path='login' element={<Login />}/>
                     <Route path='signup' element={<SignUp />}/>
+                    <Route path='login' element={<Login />}/>
+                    <Route path='cart' element={<Cart />}/>
                     <Route path='product/:id' element={<SingleProduct />}/>
+                    <Route path='checkout' element={<CheckOut />}/>
                 </Route>
               </Routes>
         </BrowserRouter>

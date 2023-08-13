@@ -8,7 +8,7 @@ function Footer() {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <p className='text-center text-white'>&copy; {new Date().getFullYear() };  powered By Developer's corner</p>
+              <p className='text-center text-white'>&copy; {new Date().getFullYear() };  e-commerce website</p>
             </div>
           </div>
         </div>
