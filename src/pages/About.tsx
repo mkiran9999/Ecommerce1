@@ -1,8 +1,13 @@
 import React from 'react'
+import Breadcrumb from '../components/Breadcrumb'
+import Meta from '../components/Meta'
 
-function About() {
+const About = () => {
   return (
-    <div>About me </div>
+    <>
+      <Meta title={"About"}/>
+      <Breadcrumb title="About"/>
+    </>
   )
 }
 
