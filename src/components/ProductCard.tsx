@@ -1,7 +1,7 @@
 import React from 'react'
 // @ts-ignore
 import ReactStars from "react-rating-stars-component";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import prodcompare from "../images/prodcompare.svg"
 import wish from "../images/wish.svg"
 import watch from "../images/watch.jpg"
@@ -10,9 +10,17 @@ import addcart from "../images/add-cart.svg"
 import view from "../images/view.svg"
 
 function ProductCard() {
+    let location = useLocation();
   return (
     <div className='col-3'>
-        <Link to={'product/:id'} className="product-card position-relative">
+        <Link to={`${
+            location.pathname=="/"
+            ? "/product/:id"
+            :location.pathname == "/product/:id"
+            ? "/product/1"
+            : ":id"
+            }`} 
+            className="product-card position-relative">
             <div className="wishlist-icon position-absolute">
                 <button className='border-0 bg-transparent'>
                     <img src={wish} alt='Wishlist'/>
